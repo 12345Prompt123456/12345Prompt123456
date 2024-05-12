@@ -10,32 +10,27 @@
 12345Prompt123456/12345Prompt123456 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->Here's the code I'm working with:
-
-# Starts the pygame
-# Starts random
-
 import pygame
 import random
 
-# Initialize Pygame
 pygame.init()
 
-# Set the dimensions of the screen
+
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Chase Game")
 
-# Define colors
+
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
-# Set up the game loop
+
 clock = pygame.time.Clock()
 running = True
 
-# Define the player and enemy positions and sizes
+
 player_size = 50
 player_x = (SCREEN_WIDTH - player_size) // 2
 player_y = SCREEN_HEIGHT - player_size - 10
@@ -44,7 +39,7 @@ enemy_x = random.randint(0, SCREEN_WIDTH - enemy_size)
 enemy_y = 0
 enemy_speed = 5
 
-# Main game loop
+
 while running:
     # Handle events
     for event in pygame.event.get():
@@ -89,5 +84,4 @@ while running:
     # Cap the frame rate
     clock.tick(60)
 
-# Quit Pygame
 pygame.quit()
